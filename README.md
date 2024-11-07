@@ -5,9 +5,9 @@ The steps are very simple.
 
 ### Usage
 1. Clone this repository.
-'''bash
+```bash
 git clone git@github.com:Tsunami-S/dotfiles.git
-'''
+```
 
 2. Execute "makeLink.sh".
 3. Use "source" command or restart terminal.
