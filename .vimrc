@@ -64,11 +64,12 @@ endif
 
 :command Cx w !cc -Wall -Wextra -Werror % -o tmp && ./tmp && rm tmp
 :command ST Stdheader
+:command NE NERDTree
 
 let g:user42 = 'tssaito'
 let g:mail42 = 'tssaito@student.42.fr'
 
- let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+ let g:rainbow_active = 1
 let g:rainbow_conf = {
 \   'guifgs': ['red', 'green', 'blue', 'yellow', 'magenta', 'lightred'], 
 \   'ctermfgs': ['red', 'green', 'blue', 'yellow', 'magenta', 'lightred']
