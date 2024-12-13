@@ -14,5 +14,5 @@ alias norminette='norminette -R CheckDefine'
 alias norm='norminette -R CheckDefine'
 export MAIL=tssaito@student.42tokyo.jp
 
-# Created by `pipx` on 2024-10-03 03:25:23
-export PATH="$PATH:/home/tsuna0712/.local/bin"
+# Created by `pipx` on 2024-12-12 12:23:41
+export PATH="$PATH:/home/tsunami/.local/bin"
