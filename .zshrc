@@ -1,5 +1,6 @@
 PROMPT="%F{28}%n%f:%F{33}%~%f$"
 
+alias sudoup='sudo apt update && sudo apt upgrade -y'
 alias gccw='gcc -Wall -Wextra -Werror'
 alias ccw='cc -Wall -Wextra -Werror'
 alias ls='ls -F --color=auto'
@@ -10,6 +11,9 @@ alias gita='git add'
 alias gitc='git commit -m'
 alias gitpush='git push'
 alias gitpull='git pull'
+alias gitpushom='git push origin main'
+alias gitpullom='git pull origin main'
+alias gitnow='git add . && git commit -m now && git push origin main'
 alias norminette='norminette -R CheckDefine'
 alias norm='norminette -R CheckDefine'
 export MAIL=tssaito@student.42tokyo.jp
