@@ -3,7 +3,7 @@ sudo apt install git zsh vim vim-athena pipx curl
 git config --global user.email "jvlipnitsk@gmail.com"
 git config --global user.name "Tsunami-S"
 pipx ensurepath
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
