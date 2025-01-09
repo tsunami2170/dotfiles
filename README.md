@@ -9,7 +9,7 @@ The steps are very simple.
 git clone git@github.com:Tsunami-S/dotfiles.git
 ```
 
-#### 2. Execute "makeLink.sh"
+#### 2. Execute "make_links.sh"
 Some of these may be something you don't need or don't want to change. if so, check what's inside and only do what you need.
 (Please be careful. The "f" option deletes exitsting files.)
 
