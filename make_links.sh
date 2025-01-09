@@ -14,7 +14,7 @@ pipx install c-formatter-42
 pipx install norminette
 pipx ensurepath
 source .zshrc .bashrc
-mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/plugin
+mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/plugin ~/.vim/undo
 git clone https://github.com/cacharle/c_formatter_42.vim.git ~/.vim/c_formatter_42
 ~/.vim/c_formatter_42/install
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
