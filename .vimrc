@@ -3,7 +3,6 @@ set encoding=utf-8
 set fileencoding=utf-8
 set noswapfile
 set clipboard=unnamedplus
-"sudo apt install vim-athena
 set smartindent
 set autoindent
 set backspace=indent,eol,start
