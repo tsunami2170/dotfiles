@@ -33,3 +33,11 @@ export MAIL=tssaito@student.42tokyo.jp
 
 # Created by `pipx` on 2024-12-12 12:23:41
 export PATH="$PATH:/home/tsunami/.local/bin"
+
+# For fcitx5
+export XMODIFIERS="@im=fcitx"
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=fcitx
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
+
+unset GTK_IM_MODULE

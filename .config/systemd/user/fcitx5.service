@@ -1,0 +1,15 @@
+[Unit]
+Description=Fcitx5 Input Method
+After=graphical-session.target dbus.service
+
+[Service]
+ExecStart=/usr/bin/fcitx5 -d
+Restart=always
+RestartSec=5s
+Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus"
+Environment="XMODIFIERS=@im=fcitx"
+Environment="GTK_IM_MODULE=fcitx"
+Environment="QT_IM_MODULE=fcitx"
+
+[Install]
+WantedBy=default.target

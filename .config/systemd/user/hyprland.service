@@ -1,0 +1,14 @@
+[Unit]
+Description=Hyprland Wayland Compositor
+After=default.target
+
+[Service]
+ExecStart=/usr/bin/Hyprland
+Restart=always
+Environment=PATH=%h/.local/bin:%h/bin:/usr/local/bin:/usr/bin:/bin
+StandardOutput=journal
+StandardError=journal
+RestartSec=2
+
+[Install]
+WantedBy=default.target

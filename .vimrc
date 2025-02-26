@@ -1,10 +1,13 @@
+set nocompatible
+filetype off
 " Basic settings
 set number
 set encoding=utf-8
 set fileencoding=utf-8
 set backspace=indent,eol,start
 set noswapfile
-syntax enable;
+"syntax enable;
+syntax enable
 
 " Underline the current line
 set cursorline
@@ -41,7 +44,8 @@ set splitright
 set splitbelow
 
 " No highlight
-nnoremap <ESC><ESC> :nohlsearch<CR>
+"noremap <ESC><ESC> :nohlsearch<CR>
+noremap <S-n> :nohlsearch<CR>
 " Change the window size
 nnoremap <C-l> <C-w>>
 nnoremap <C-h> <C-w><
