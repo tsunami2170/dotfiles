@@ -25,6 +25,7 @@ alias gitstatus='git status'
 alias gitpushom='git push origin main'
 alias gitpullom='git pull origin main'
 alias gitnow='git add . && git commit -m now && git push origin main'
+alias obsidian="obsidian --force-device-scale-factor=1"
 
 # For 42Tokyo
 alias norminette='norminette -R CheckDefine'
@@ -39,5 +40,5 @@ export XMODIFIERS="@im=fcitx"
 export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=fcitx
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
-
+export MOZ_ENABLE_WAYLAND=1
 unset GTK_IM_MODULE

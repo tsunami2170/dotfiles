@@ -1,0 +1,14 @@
+[Unit]
+Description=Auto switch display based on external monitors
+After=graphical.target
+
+[Service]
+ExecStart=/usr/local/bin/set-display.sh
+Environment="DISPLAY=:0"
+Environment="XDG_RUNTIME_DIR=%t"
+StandardOutput=journal
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target
