@@ -1,5 +1,3 @@
-set nocompatible
-filetype off
 " Basic settings
 set number
 set encoding=utf-8

@@ -12,7 +12,8 @@ alias gccw='gcc -Wall -Wextra -Werror'
 alias ccw='cc -Wall -Wextra -Werror'
 alias ls='ls -F --color=auto'
 alias ll='ls -la'
-alias xcc='xclip -selection c'
+alias wlc='wl-copy < '
+alias nv='nvim'
 alias envlj='env LANG=ja_JP.UTF-8'
 
 # Alias for git
@@ -42,3 +43,5 @@ export GLFW_IM_MODULE=fcitx
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
 export MOZ_ENABLE_WAYLAND=1
 unset GTK_IM_MODULE
+export PATH=//home/tsunami/.venv/bin:/home/tsunami/.local/bin:/home/tsunami/bin:/usr/local/bin:/usr/bin:/bin:/home/tsunami/.local/bin:/home/tsunami/.venv/bib
+export PATH=$PATH:/home/tsunami/.venv/bib
