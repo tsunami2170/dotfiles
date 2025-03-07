@@ -57,3 +57,5 @@ opt.shell = "zsh"
 
 -- Enable wider range of colors
 opt.termguicolors = true
+
+opt.colorcolumn = "80"

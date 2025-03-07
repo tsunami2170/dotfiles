@@ -15,10 +15,19 @@ return {
                     vim.fn["vsnip#anonymous"](args.body)
                 end,
             },
+            completion = {
+                autocomplete = false,  -- 自動補完を無効にする
+            },
             mapping = cmp.mapping.preset.insert({
-                ["<C-Space>"] = cmp.mapping.complete(),
-                ["<CR>"] = cmp.mapping.confirm({ select = true }),
-                ["<Tab>"] = cmp.mapping.select_next_item(),
+                ["<C-Space>"] = cmp.mapping.complete(),  -- Ctrl+Spaceで補完開始
+                ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Enterで確定
+                ["<Tab>"] = cmp.mapping(function(fallback)
+                    if cmp.visible() then
+                        cmp.select_next_item()  -- 補完候補が表示されているときは次の項目を選択
+                    else
+                        cmp.complete()  -- 補完候補が表示されていないときは補完を開始
+                    end
+                end, { "i", "s" }),
                 ["<S-Tab>"] = cmp.mapping.select_prev_item(),
             }),
             sources = cmp.config.sources({

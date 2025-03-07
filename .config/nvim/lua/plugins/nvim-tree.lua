@@ -26,6 +26,5 @@ return {
   },
   config = function(_, opts)
     require("nvim-tree").setup(opts)
-    vim.cmd("NvimTreeOpen") -- Neovim起動時に開く
   end,
 }

@@ -14,6 +14,7 @@ alias ls='ls -F --color=auto'
 alias ll='ls -la'
 alias wlc='wl-copy < '
 alias nv='nvim'
+alias vim='nvim'
 alias envlj='env LANG=ja_JP.UTF-8'
 
 # Alias for git

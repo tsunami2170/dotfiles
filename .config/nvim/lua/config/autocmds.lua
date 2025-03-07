@@ -1,5 +1,6 @@
 -- color scheme
 vim.cmd("colorscheme tokyonight")
+vim.cmd("highlight ColorColumn ctermbg=8 guibg=#333333")
 
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
@@ -25,3 +26,4 @@ vim.cmd([[
   highlight RainbowDelimiterViolet	guifg=#ed7842
   highlight RainbowDelimiterCyan	guifg=#1832b8
 ]])
+
