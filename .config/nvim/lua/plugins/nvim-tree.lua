@@ -3,7 +3,7 @@ return {
   opts = {
     view = {
       side = "left",  -- 左側に表示
-      width = 30,     -- 幅の指定
+      width = 20,     -- 幅の指定
     },
     update_focused_file = {
       enable = true,  -- カレントファイルを自動でハイライト

@@ -1,0 +1,10 @@
+[Unit]
+Description=Reload Hyprland Config after Sleep
+After=sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/hyprctl reload
+
+[Install]
+WantedBy=sleep.target
