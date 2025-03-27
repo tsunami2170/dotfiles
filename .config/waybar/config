@@ -28,7 +28,7 @@
      },
      "custom/swaylock": {
         "format": "LOCK",
-        "on-click": "swaylock -f --image /home/tsunami/Downloads/pics/child.png --inside-color ffffff00 --ring-color ffffff00 --key-hl-color ffd9d980 --line-ver-color ffffff00 --line-color ffffff00 --line-clear-color ffffff00 --line-clear-color ffffff00 --ring-clear-color ffffff00 --ring-wrong-color bf656580 --inside-wrong-color bf656580 --ring-ver-color ffffff00 --inside-ver-color ffffff00 --indicator-thickness 5 --separator-color ffffff00 --text-clear-color 7d686080 --text-wrong-color 7d686080 --text-ver-color ffffff00 --text-color 7d686080 & systemctl suspend",
+        "on-click": "swaylock -f --image /home/tsunami/.config/hypr/wallpaper/child.png --inside-color ffffff00 --ring-color ffffff00 --key-hl-color ffd9d980 --line-ver-color ffffff00 --line-color ffffff00 --line-clear-color ffffff00 --line-clear-color ffffff00 --ring-clear-color ffffff00 --ring-wrong-color bf656580 --inside-wrong-color bf656580 --ring-ver-color ffffff00 --inside-ver-color ffffff00 --indicator-thickness 5 --separator-color ffffff00 --text-clear-color 7d686080 --text-wrong-color 7d686080 --text-ver-color ffffff00 --text-color 7d686080 & systemctl suspend",
         "tooltip": false,
       },
         "custom/shutdown": {
