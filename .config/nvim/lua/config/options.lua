@@ -1,6 +1,7 @@
 local opt = vim.opt
 
 opt.modifiable = true
+opt.mouse = ""
 
 -- Display line number
 opt.number = true
