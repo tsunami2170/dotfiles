@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "network", "cpu", "battery", "custom/swaylock", "custom/shutdown", "custom/reboot", "custom/suspend", "idle_inhibitor"],
+    "modules-right": ["custom/bluetooth", "tray", "network", "cpu", "battery", "custom/swaylock", "custom/shutdown", "custom/reboot", "custom/suspend", "idle_inhibitor", "custom/screenshot"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -128,5 +128,16 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
+    },
+	"custom/screenshot": {
+		"format": "",
+		"tooltip": "スクリーンショットを撮る",
+		"on-click": "grim ~/Screenshot/screenshot_$(date +%Y%m%d-%H%M%S).png",
+		"interval": 0
+	},
+	"custom/bluetooth": {
+		"format": "",
+		"tooltip": "bluetooth",
+		"on-click": "blueman-manager",
+	}
 }
