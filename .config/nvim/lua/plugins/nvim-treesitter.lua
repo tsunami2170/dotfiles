@@ -9,8 +9,12 @@ return
 	opts.indent = { enable = true }
 	vim.list_extend(opts.ensure_installed, {
 	  "bash",
+	  "sh",
+	  "zsh",
 	  "c",
 	  "cpp",
+	  "python",
+	  "swift",
 	  "html",
 	  "javascript",
 	  "json",
