@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Iosevka, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 17px;
+    font-family: "JetBrainsMono Nerd Font Mono", "Noto Sans Mono", monospace;
+    font-size: 13px;
     min-height: 0;
 }
 
@@ -162,4 +162,39 @@ label:focus {
 
 
 #temperature {
+}
+
+#custom-reboot {
+    font-size: 20px;
+}
+
+#custom-suspend {
+    font-size: 20px;
+}
+
+#custom-screenshot {
+    font-size: 20px;
+}
+
+#custom-bluetooth {
+    font-size: 20px;
+}
+
+#custom-shutdown {
+    font-size: 20px;
+}
+
+#custom-separator1,
+#custom-separator2,
+#custom-separator3,
+#custom-separator4,
+#custom-separator5,
+#custom-separator6,
+#custom-separator7,
+#custom-separator8,
+#custom-separator9,
+#custom-separator10 {
+    color: #888888;
+    padding: 0 0px;
+    font-size: 20px;
 }

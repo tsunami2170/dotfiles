@@ -3,11 +3,31 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 6, // Waybar height (to be removed for auto height)
     "width": "auto", // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 6, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/bluetooth", "tray", "network", "cpu", "battery", "custom/swaylock", "custom/shutdown", "custom/reboot", "custom/suspend", "idle_inhibitor", "custom/screenshot"],
+	"modules-right": [
+		"custom/bluetooth",
+		"custom/separator1",
+		"tray",
+		"custom/separator2",
+		"network",
+		"custom/separator3",
+		"cpu",
+		"custom/separator4",
+		"battery",
+		"custom/separator5",
+		"custom/swaylock",
+		"custom/separator6",
+		"custom/shutdown",
+		"custom/separator7",
+		"custom/reboot",
+		"custom/separator8",
+		"custom/suspend",
+		"custom/separator9",
+		"custom/screenshot"
+	],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -92,7 +112,7 @@
         "format": "BAT {capacity}%",
         "format-charging": "BAT-CH {capacity}%",
         "format-plugged": "BAT_PL {capacity}% ",
-        "format-alt": "{time}",
+        // "format-alt": "{time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
     },
@@ -130,7 +150,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
 	"custom/screenshot": {
-		"format": "",
+		"format": " ",
 		"tooltip": "スクリーンショットを撮る",
 		"on-click": "grim ~/Screenshot/screenshot_$(date +%Y%m%d-%H%M%S).png",
 		"interval": 0
@@ -139,5 +159,15 @@
 		"format": "",
 		"tooltip": "bluetooth",
 		"on-click": "blueman-manager",
-	}
+	},
+	"custom/separator1": { "format": "|", "tooltip": false },
+	"custom/separator2": { "format": "|", "tooltip": false },
+	"custom/separator3": { "format": "|", "tooltip": false },
+	"custom/separator4": { "format": "|", "tooltip": false },
+	"custom/separator5": { "format": "|", "tooltip": false },
+	"custom/separator6": { "format": "|", "tooltip": false },
+	"custom/separator7": { "format": "|", "tooltip": false },
+	"custom/separator8": { "format": "|", "tooltip": false },
+	"custom/separator9": { "format": "|", "tooltip": false },
+	"custom/separator10": { "format": "|", "tooltip": false }
 }
