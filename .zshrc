@@ -117,7 +117,7 @@ git_status_segment() {
     [[ $x == "?" && $y == "?" ]] && ((untracked++))
   done <<< "$dirty"
 
-  local total_dirty=$((unstaged + untracked))
+  local total_dirty=$((staged + unstaged + untracked))
   if [[ $total_dirty -gt 0 ]]; then
     echo "$(segment $MY_PINK white none " $total_dirty")"
   fi
