@@ -13,6 +13,7 @@ alias ll='ls -la'
 alias wlc='wl-copy < '
 alias nv='nvim'
 alias envlj='env LANG=ja_JP.UTF-8'
+alias open='xdg-open'
 
 # Alias for git
 alias gita='git add'
