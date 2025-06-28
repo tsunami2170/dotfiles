@@ -2,23 +2,23 @@ return {
   "nvim-tree/nvim-tree.lua",
   opts = {
     view = {
-      side = "left",  -- 左側に表示
-      width = 20,     -- 幅の指定
+      side = "left",
+      width = 20,
     },
     update_focused_file = {
-      enable = true,  -- カレントファイルを自動でハイライト
+      enable = true,
     },
     renderer = {
-      add_trailing = true, -- ディレクトリの末尾に `/` を追加
+      add_trailing = true,
       indent_markers = {
-        enable = true,  -- ツリーのインデントマーカーを有効化
+        enable = true,
       },
       icons = {
         show = {
-          file = false,       -- ファイルアイコンを非表示
-          folder = false,     -- フォルダアイコンを非表示
-          folder_arrow = false, -- フォルダ展開アイコンを非表示
-          git = false,        -- Gitステータスアイコンを非表示
+          file = false,
+          folder = false,
+          folder_arrow = false,
+          git = false,
         },
       },
     },

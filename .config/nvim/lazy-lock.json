@@ -11,7 +11,7 @@
   "copilot.lua": { "branch": "master", "commit": "c1bb86abbed1a52a11ab3944ef00c8410520543d" },
   "dial.nvim": { "branch": "master", "commit": "54b503f906bc9e5ab85288414840a1b86d40769f" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
-  "lualine.nvim": { "branch": "master", "commit": "0c6cca9f2c63dadeb9225c45bc92bb95a151d4af" },
+  "lualine.nvim": { "branch": "master", "commit": "a94fc68960665e54408fe37dcf573193c4ce82c9" },
   "mason.nvim": { "branch": "main", "commit": "7f265cd6ae56cecdd0aa50c8c73fc593b0604801" },
   "nvim-cmp": { "branch": "main", "commit": "8c82d0bd31299dbff7f8e780f5e06d2283de9678" },
   "nvim-lspconfig": { "branch": "master", "commit": "3ea99227e316c5028f57a4d86a1a7fd01dd876d0" },

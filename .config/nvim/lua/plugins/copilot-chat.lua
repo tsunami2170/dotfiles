@@ -10,7 +10,6 @@ return {
         debug = true,
       })
 
-      -- ✅ CopilotChatバッファが読み取り専用になる問題を防ぐ
       vim.api.nvim_create_autocmd("BufWinEnter", {
         pattern = "copilot-chat-*",
         callback = function()
@@ -18,7 +17,6 @@ return {
         end,
       })
 
-      -- :CC コマンドの登録（任意）
       vim.api.nvim_create_user_command("CC", function()
         require("CopilotChat").open({})
       end, {})
