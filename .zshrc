@@ -51,6 +51,9 @@ fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit
 compinit
 
+# For gopath
+export GOPATH=/home/tsunami/Downloads/go
+
 # For history (use after install fzf)
 bindkey '^R' fzf-history-widget
 fzf-history-widget() {
