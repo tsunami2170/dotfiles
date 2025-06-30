@@ -2,6 +2,9 @@ local opt = vim.opt
 
 opt.modifiable = true
 
+-- Display error/warning icon instead of number
+vim.opt.signcolumn = "number"
+
 -- Disable using mouse
 opt.mouse = ""
 
@@ -52,7 +55,11 @@ opt.splitbelow = true
 
 -- Save undo
 opt.undofile = true
-opt.undodir = vim.fn.expand("~/.nvim/undo")
+local undodir = vim.fn.expand("~/.nvim/undo")
+opt.undodir = undodir
+if vim.fn.isdirectory(undodir) == 0 then
+  vim.fn.mkdir(undodir, "p")
+end
 opt.swapfile = false
 
 -- Set shell

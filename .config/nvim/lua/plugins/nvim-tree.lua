@@ -9,6 +9,9 @@ return {
       view = {
         side = "left",
         width = 20,
+		number = false,
+		relativenumber = false,
+		signcolumn = "no",
       },
       update_focused_file = {
         enable = true,

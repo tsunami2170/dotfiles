@@ -25,20 +25,3 @@ require("lazy").setup({
     version = "*",
   },
 })
-
----- ignore message including 'position_encoding'
---local notify_suppress_group = vim.api.nvim_create_augroup("NotifySuppress", { clear = true })
---
---vim.api.nvim_create_autocmd("VimEnter", {
---  group = notify_suppress_group,
---  pattern = "*",
---  callback = function()
---    local original_notify = vim.notify
---    vim.notify = function(msg, level, opts)
---      if msg and type(msg) == "string" and msg:match("position_encoding param is required") then
---        return
---      end
---      original_notify(msg, level, opts)
---    end
---  end,
---})

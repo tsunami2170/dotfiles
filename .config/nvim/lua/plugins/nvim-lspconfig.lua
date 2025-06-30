@@ -32,7 +32,12 @@ return {
 	  -- display amendment proposal
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 	  -- switch error display/hidden
-      vim.keymap.set("n", "<leader>dd", ":LspDiagnosticsToggle<CR>", { desc = "switch errors", buffer = bufnr })
+      vim.keymap.set(
+		"n",
+		"<leader>dd",
+		":LspDiagnosticsToggle<CR>",
+		{ desc = "switch errors", buffer = bufnr }
+	)
     end
 
 	-- import basic functions
@@ -51,7 +56,12 @@ return {
         ts_ls = {
             cmd = { "typescript-language-server", "--stdio" },
             on_attach = on_attach,
-            root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
+            root_dir = util.root_pattern(
+				"package.json",
+				"tsconfig.json",
+				"jsconfig.json",
+				".git"
+			),
         },
     }
     for server, opts in pairs(servers) do
@@ -62,14 +72,16 @@ return {
     end
 
 	-- switch error display/hidden
-    vim.api.nvim_create_user_command("LspDiagnosticsToggle", function()
-      local current = vim.diagnostic.config().virtual_text
-      vim.diagnostic.config({
-        virtual_text = not current,
-        signs = not current,
-        underline = not current,
-      })
-      print("LspDiagnosis: " .. (current and "hidden" or "display"))
-    end, {})
+	vim.api.nvim_create_user_command("LspDiagnosticsToggle", function()
+	  local current = vim.diagnostic.config().virtual_text
+	  vim.diagnostic.config({
+		virtual_text = not current,
+		signs = not current,
+		underline = not current,
+	  })
+	  print("LspDiagnosis: " .. (current and "hidden" or "display"))
+	end, {})
+	-- show text color for Unnecessary
+	vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", {})
   end,
 }

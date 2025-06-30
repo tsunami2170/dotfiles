@@ -27,5 +27,5 @@ map("n", "<A-k>", "<C-w>k", { silent = true })
 map("n", "<A-l>", "<C-w>l", { silent = true })
 
 -- Setting for filer
-vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader><Enter>", ":lua require('nvim-tree.api').node.open.tab()<CR>", { noremap = true, silent = true })
+map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree", silent = true })
+map("n", "<leader><Enter>", ":lua require('nvim-tree.api').node.open.tab()<CR>", { desc = "Open in NvimTree new tab", silent = true })
