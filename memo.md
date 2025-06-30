@@ -13,23 +13,22 @@ git config --global user.name "Tsunami-S"
 ## make directories and files
 ```
 sudo chsh -s /bin/zsh tsunami
-touch ~/.zsh_history
-mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/plugin ~/.vim/undo
+touch /home/$(USER)/.zsh_history
+mkdir -p /home/$(USER)/.vim/autoload /home/$(USER)/.vim/bundle /home/$(USER)/.vim/plugin /home/$(USER)/.vim/undo
 ```
 
 ## for all OS
 ```
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/.vim/ ~/.vim
+ln -sf /home/$(USER)/dotfiles/.bashrc /home/$(USER)/.bashrc
+ln -sf /home/$(USER)/dotfiles/.zshrc /home/$(USER)/.zshrc
+ln -sf /home/$(USER)/dotfiles/.vimrc /home/$(USER)/.vimrc
+ln -sf /home/$(USER)/dotfiles/.vim/ /home/$(USER)/.vim
 ```
 
 ## for arch linux
 ```
-ln -sf ~/dotfiles/.xprofile ~/.xprofile
-ln -sf ~/dotfiles/.xinitrc ~/.xinitrc
-ln -sf ~/dotfiles/.config ~/.config
+ln -sf /home/$(USER)/dotfiles/.xprofile /home/$(USER)/.profile
+ln -sf /home/$(USER)/dotfiles/.config /home/$(USER)/.config
 ```
 
 ## read zshrc
@@ -43,19 +42,5 @@ sudo pacman -S python-pip python-pipx
 pipx ensurepath
 ```
 
-### install cformatter
-```
-pipx install c-formatter-42
-pipx ensurepath
-source .zshrc
-git clone https://github.com/cacharle/c_formatter_42.vim.git
-./install
-```
-
 ### install nerdtree
-```
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-cd ~/.vim/bundle
-git clone https://github.com/scrooloose/nerdtree.git
-```
 ### install rainbow
