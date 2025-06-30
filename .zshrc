@@ -31,10 +31,9 @@ alias obsidian="obsidian --force-device-scale-factor=1"
 # For 42Tokyo
 alias norminette='norminette -R CheckDefine'
 alias norm='norminette -R CheckDefine'
-export MAIL=tssaito@student.42tokyo.jp
 
 # Created by `pipx` on 2024-12-12 12:23:41
-export PATH="$PATH:/home/tsunami/.local/bin"
+export PATH="$PATH:/home/$USER/.local/bin"
 
 # For fcitx5
 export XMODIFIERS="@im=fcitx"
@@ -43,8 +42,7 @@ export GLFW_IM_MODULE=fcitx
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
 export MOZ_ENABLE_WAYLAND=1
 unset GTK_IM_MODULE
-export PATH=//home/tsunami/.venv/bin:/home/tsunami/.local/bin:/home/tsunami/bin:/usr/local/bin:/usr/bin:/bin:/home/tsunami/.local/bin:/home/tsunami/.venv/bib
-export PATH=$PATH:/home/tsunami/.venv/bib
+export PATH=//home/$USER/.venv/bin:/home/$USER/.local/bin:/home/$USER/bin:/usr/local/bin:/usr/bin:/bin:/home/$USER/.local/bin:/home/$USER/.venv/bib
 
 # For complemention
 fpath=(~/.zsh/completions $fpath)
@@ -52,7 +50,7 @@ autoload -Uz compinit
 compinit
 
 # For gopath
-export GOPATH=/home/tsunami/Downloads/go
+export GOPATH=/home/$USER/Downloads/go
 
 # For history (use after install fzf)
 bindkey '^R' fzf-history-widget

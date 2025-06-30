@@ -83,8 +83,6 @@ endif
 
 " Alias
 :command Cx w !cc -Wall -Wextra -Werror % -o tmp && ./tmp && rm tmp
-:command ST Stdheader
-:command NE NERDTree
 
 " Setting for Rainbow(plugin)
  let g:rainbow_active = 1
@@ -92,10 +90,3 @@ let g:rainbow_conf = {
 \   'guifgs': ['red', 'green', 'blue', 'yellow', 'magenta', 'lightred'], 
 \   'ctermfgs': ['red', 'green', 'blue', 'yellow', 'magenta', 'lightred']
 \}
-
-" Setting for Nerdtree(plugin)
-execute pathogen#infect()
-
-" For 42Tokyo
-let g:user42 = 'tssaito'
-let g:mail42 = 'tssaito@student.42.fr'
