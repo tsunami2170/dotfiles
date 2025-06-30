@@ -1,11 +1,13 @@
 return 
 {
 	"folke/tokyonight.nvim",
+	-- setting for loading (first and top priority)
 	lazy = false,
 	priority = 1000,
 	config = function()
 	require("tokyonight").setup({
 		style = "night",
+		transparent = true, 
 		on_colors = function(colors)
 			colors.bg = "#212121"
 			colors.fg = "#FFFFFF"

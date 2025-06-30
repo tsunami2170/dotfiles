@@ -1,6 +1,15 @@
 -- color scheme
 vim.cmd("colorscheme tokyonight")
+-- one column limits
 vim.cmd("highlight ColorColumn ctermbg=8 guibg=#333333")
+-- color of number
+vim.cmd([[highlight LineNr guifg=#ffffff]])
+
+vim.cmd [[
+  highlight Normal guibg=NONE ctermbg=NONE
+  highlight NormalNC guibg=NONE ctermbg=NONE
+  highlight NvimTreeNormal guibg=NONE ctermbg=NONE
+]]
 
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",

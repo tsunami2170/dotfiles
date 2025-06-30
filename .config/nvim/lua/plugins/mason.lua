@@ -1,3 +1,4 @@
+-- auto import neccesary packages
 return 
 {
 	"williamboman/mason.nvim",

@@ -7,7 +7,7 @@ return {
     },
     config = function()
       require("CopilotChat").setup({
-        debug = true,
+        debug = false
       })
 
       vim.api.nvim_create_autocmd("BufWinEnter", {

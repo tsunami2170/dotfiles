@@ -1,12 +1,18 @@
+-- Status Bar
 return {
   "nvim-lualine/lualine.nvim",
   config = function()
+	-- my func for display cursor position
     local function cursor_position()
+	  -- '.' means current position
+	  -- '$' means last position
       local current_line = vim.fn.line(".")
       local total_lines = vim.fn.line("$")
       local current_col = vim.fn.col(".")
       local total_cols = #vim.fn.getline(".")
-      return string.format("Ln %d/%d, Col %d/%d", current_line, total_lines, current_col, total_cols)
+      return string.format(
+		"Ln %d/%d, Col %d/%d",
+		current_line, total_lines, current_col, total_cols)
     end
     require("lualine").setup({
       options = {

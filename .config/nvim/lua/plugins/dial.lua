@@ -1,8 +1,10 @@
+-- increase/decrease blocks(num, bool, data)
 return
 {
 	"monaqa/dial.nvim",
 	lazy = false,
 	keys = {
+		-- increase/decrease one block
 		{	"<C-a>", 
 			function() require("dial.map").inc_normal() end, 
 			mode = "n",
@@ -11,11 +13,17 @@ return
 			function() require("dial.map").dec_normal() end,
 			mode = "n",
 			desc = "Decrement" },
+		-- increase/decrease selected blocks
 		{	"g<C-a>", 
 			function() require("dial.map").inc_visual() end,
 			mode = "v",
 			desc = "Increment (Visual)" },
-		{ "g<C-x>", function() require("dial.map").dec_visual() end, mode = "v", desc = "Decrement (Visual)" },
+		{
+			"g<C-x>",
+			function() require("dial.map").dec_visual() end,
+			mode = "v",
+			desc = "Decrement (Visual)",
+		},
 	},
 	config = function()
 	local augend = require("dial.augend")

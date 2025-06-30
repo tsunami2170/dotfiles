@@ -3,9 +3,10 @@ return {
   cmd = "Copilot",
   config = function()
     require("copilot").setup({
+	  -- Disable auto suggestion
       suggestion = {enabled = false},
-      panel = {enabled = false},
-      copilot_node_command = 'node'
+	  -- do not use panel (use copilot chat)
+      panel = {enabled = true},
     })
   end,
 }

@@ -1,3 +1,4 @@
+-- split or join code blocks
 return
 {
 	"Wansmer/treesj",
@@ -7,8 +8,10 @@ return
 	dependencies = { "nvim-treesitter/nvim-treesitter" },
 	config = function()
 	require("treesj").setup({
+		-- use original keymap
 		use_default_keymaps = false,
-		max_join_length = 400,
+		-- join blocks within 200 characters
+		max_join_length = 200,
 	})
 	end,
 }
