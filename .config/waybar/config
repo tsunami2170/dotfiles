@@ -1,157 +1,102 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 6, // Waybar height (to be removed for auto height)
-    "width": "auto", // Waybar width
-    "spacing": 6, // Gaps between modules (4px)
+    // Position and size 
+    "layer": "top",
+    "position": "top",
+    "height": 6,
+    "width": "auto",
+    "spacing": 6,
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
 	"modules-right": [
-		"custom/bluetooth",
-		"custom/separator1",
-		"tray",
-		"custom/separator2",
-		"network",
-		"custom/separator3",
-		"cpu",
-		"custom/separator4",
-		"battery",
-		"custom/separator5",
-		"custom/swaylock",
-		"custom/separator6",
-		"custom/shutdown",
-		"custom/separator7",
-		"custom/reboot",
-		"custom/separator8",
-		"custom/suspend",
-		"custom/separator9",
-		"custom/screenshot"
+		"tray",	            "custom/separator1",
+		"custom/bluetooth", "custom/separator2",
+		"network",          "custom/separator3",
+		"cpu",              "custom/separator4",
+		"pulseaudio",       "custom/separator5",
+		"battery",          "custom/separator6",
+		"custom/swaylock",  "custom/separator7",
+		"custom/shutdown",  "custom/separator8",
+		"custom/reboot",    "custom/separator9",
+		"custom/suspend",   "custom/separator0",
+		"custom/screenshot",
 	],
     // Modules configuration
-     "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "warp-on-scroll": false,
-         "format": "{name}",
-         "persistent_workspaces": {
-           "1": [],
-           "2": [],
-           "3": [],
-           "4": [],
-           "5": [],
-           "6": [],
-           "7": [],
-           "8": [],
-           "9": []
-          },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": []
+        },
      },
-     "custom/swaylock": {
-        "format": "LOCK",
-        "on-click": "swaylock -f --image /home/tsunami/.config/hypr/wallpaper/child.png --inside-color ffffff00 --ring-color ffffff00 --key-hl-color ffd9d980 --line-ver-color ffffff00 --line-color ffffff00 --line-clear-color ffffff00 --line-clear-color ffffff00 --ring-clear-color ffffff00 --ring-wrong-color bf656580 --inside-wrong-color bf656580 --ring-ver-color ffffff00 --inside-ver-color ffffff00 --indicator-thickness 5 --separator-color ffffff00 --text-clear-color 7d686080 --text-wrong-color 7d686080 --text-ver-color ffffff00 --text-color 7d686080 & systemctl suspend",
-        "tooltip": false,
-      },
-        "custom/shutdown": {
-    "format": "",
-    "tooltip": "シャットダウン",
-    "on-click": "systemctl poweroff"
-  },
-  "custom/reboot": {
-    "format": "",
-    "tooltip": "再起動",
-    "on-click": "systemctl reboot"
-  },
-  "custom/suspend": {
-    "format": "",
-    "tooltip": "スリープ",
-    "on-click": "systemctl suspend"
-  },
-      "idle_inhibitor": {
-        "format": "{icon} ",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
     "tray": {
 	"format": "",
         "icon-size": 16,
         "spacing":5 
     },
     "clock": {
-        // "timezone": "America/New_York",
+		"interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%H:%M}",
+		"format-alt": "{:%m-%d %H:%M:%S}" 
     },
     "cpu": {
-        "format": "CPU {usage}%",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "MEM {}%"
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C 🔥",
-        "format": "{temperatureC}°C",
-        "tooltip": "false"
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "BL {percent}%",
-        //"format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "CPU {usage}%"
     },
     "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
         "format": "BAT {capacity}%",
         "format-charging": "BAT-CH {capacity}%",
-        "format-plugged": "BAT_PL {capacity}% ",
-        // "format-alt": "{time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "format-plugged": "BAT_PL {capacity}%",
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "NET {essid} ({signalStrength}%)",
-        "format-ethernet": "NET {ipaddr}/{cidr}  ",
+        "format-wifi": "{essid}({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr}  ",
         "tooltip-format": "{ifname} via {gwaddr}  ",
-        "format-linked": "NET {ifname} (No IP)  ",
+        "format-linked": "{ifname}(No IP)  ",
         "format-disconnected": "Disconnected",
-	"format-bars": "",
-        "format-alt": "NET {ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        // "format": "{volume}% {icon} {format_source}",
         "format": "VOL {volume}%",
+        "format-muted": "VOL-MUT",
         "format-bluetooth": "VOL-BT {volume}%",
-        "format-bluetooth-muted": "VOL-BL-MUT",
-        "format-muted": "VOL-MUT{format_source}",
+        "format-bluetooth-muted": "VOL-MUT",
         "format-source": "MIC {volume}%",
         "format-source-muted": "MIC-MUT",
-        "on-click": "pavucontrol"
+		"on-click": "amixer set Master toggle"
     },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    "custom/swaylock": {
+        "format": "LOCK",
+        "on-click": "swaylock -f --image /home/tsunami/.config/hypr/wallpaper/child.png --inside-color ffffff00 --ring-color ffffff00 --key-hl-color ffd9d980 --line-ver-color ffffff00 --line-color ffffff00 --line-clear-color ffffff00 --line-clear-color ffffff00 --ring-clear-color ffffff00 --ring-wrong-color bf656580 --inside-wrong-color bf656580 --ring-ver-color ffffff00 --inside-ver-color ffffff00 --indicator-thickness 5 --separator-color ffffff00 --text-clear-color 7d686080 --text-wrong-color 7d686080 --text-ver-color ffffff00 --text-color 7d686080 & systemctl suspend",
+        "tooltip": false,
+      },
+    "custom/shutdown": {
+		"format": "",
+		"tooltip": "shutdown",
+		"on-click": "systemctl poweroff"
+    },
+    "custom/reboot": {
+		"format": "",
+		"tooltip": "reboot",
+		"on-click": "systemctl reboot"
+    },
+    "custom/suspend": {
+		"format": "",
+		"tooltip": "sleep",
+		"on-click": "systemctl suspend"
     },
 	"custom/screenshot": {
 		"format": " ",
-		"tooltip": "スクリーンショットを撮る",
+		"tooltip": "screenshot",
 		"on-click": "grim ~/Screenshot/screenshot_$(date +%Y%m%d-%H%M%S).png",
 		"interval": 0
 	},
@@ -169,5 +114,5 @@
 	"custom/separator7": { "format": "|", "tooltip": false },
 	"custom/separator8": { "format": "|", "tooltip": false },
 	"custom/separator9": { "format": "|", "tooltip": false },
-	"custom/separator10": { "format": "|", "tooltip": false }
+	"custom/separator0": { "format": "|", "tooltip": false }
 }

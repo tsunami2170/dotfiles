@@ -1,3 +1,5 @@
+# for the case using desktop manager
+
 [Desktop Entry]
 Type=Application
 Exec=fcitx5
