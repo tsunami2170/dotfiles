@@ -57,6 +57,10 @@
         "format": "BAT {capacity}%",
         "format-charging": "BAT-CH {capacity}%",
         "format-plugged": "BAT_PL {capacity}%",
+        "states": {
+            "critical": 70,
+        },
+        "interval": 5
     },
     "network": {
         "format-wifi": "{essid}({signalStrength}%)",
