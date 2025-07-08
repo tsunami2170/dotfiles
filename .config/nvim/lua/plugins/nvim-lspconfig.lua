@@ -53,6 +53,7 @@ return {
         clangd = {},
         bashls = {},
         pyright = {},
+        solargraph = {},
         ts_ls = {
             cmd = { "typescript-language-server", "--stdio" },
             on_attach = on_attach,

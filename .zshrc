@@ -32,8 +32,8 @@ alias obsidian="obsidian --force-device-scale-factor=1"
 alias norminette='norminette -R CheckDefine'
 alias norm='norminette -R CheckDefine'
 
-# Created by `pipx` on 2024-12-12 12:23:41
 export PATH="$PATH:/home/$USER/.local/bin"
+export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
 
 # For fcitx5
 export XMODIFIERS="@im=fcitx"
@@ -42,7 +42,6 @@ export GLFW_IM_MODULE=fcitx
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
 export MOZ_ENABLE_WAYLAND=1
 unset GTK_IM_MODULE
-export PATH=//home/$USER/.venv/bin:/home/$USER/.local/bin:/home/$USER/bin:/usr/local/bin:/usr/bin:/bin:/home/$USER/.local/bin:/home/$USER/.venv/bib
 
 # For complemention
 fpath=(~/.zsh/completions $fpath)

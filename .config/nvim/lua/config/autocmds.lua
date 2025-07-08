@@ -11,3 +11,9 @@ vim.api.nvim_create_autocmd("UIEnter", {
 	vim.opt.fillchars:append({ eob = " " })
   end,
 })
+
+-- highlight large space
+vim.cmd([[
+  highlight ZenkakuSpace guibg=#FFFFAA
+  match ZenkakuSpace /　/  
+]])

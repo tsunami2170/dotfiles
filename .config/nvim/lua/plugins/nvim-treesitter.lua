@@ -9,6 +9,7 @@ return {
       additional_vim_regex_highlighting = false,
     }
     opts.indent = { enable = true }
+    opts.endwise = { enable = true }
     vim.list_extend(opts.ensure_installed, {
       "bash",
       "c",
@@ -26,6 +27,7 @@ return {
       "typescript",
       "vim",
       "yaml",
+	  "ruby",
     })
   end,
   config = function(_, opts)
