@@ -10,14 +10,34 @@ return {
     local util = require("lspconfig.util")
 
 	-- display errors
-    vim.diagnostic.config({
-	  -- display error messages
-      virtual_text = true,
-	  -- mark 'E' near the number of lines
-      signs = true,
-      underline = true,
-      update_in_insert = false,
-    })
+	vim.diagnostic.config({
+	  virtual_text = {
+		spacing = 4,
+		source = "if_many",
+	  },
+	  float = {
+		border = "rounded",
+		source = "always",
+		focusable = false,
+		header = "",
+		prefix = "",
+	  },
+	  signs = true,
+	  underline = true,
+	  update_in_insert = false,
+	})
+	-- Display error message more details with popup
+	vim.api.nvim_create_autocmd("CursorHold", {
+	  callback = function()
+		vim.diagnostic.open_float(nil, {
+		  focusable = false,
+		  border = "rounded",
+		  source = "always",
+		})
+	  end,
+	})
+	-- Display popup 0.3s after the cursor stops
+	vim.o.updatetime = 300
 
     local on_attach = function(_, bufnr)
       local opts = { buffer = bufnr, noremap = true, silent = true }

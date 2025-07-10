@@ -29,3 +29,9 @@ map("n", "<A-l>", "<C-w>l", { silent = true })
 -- Setting for filer
 map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree", silent = true })
 map("n", "<leader><Enter>", ":lua require('nvim-tree.api').node.open.tab()<CR>", { desc = "Open in NvimTree new tab", silent = true })
+
+-- Setting for Rubocop
+vim.keymap.set("n", "<leader>ru", function()
+  vim.cmd("!rubocop -A %")
+  vim.cmd("edit!")
+end, { desc = "Rubocop auto-correct current file" })

@@ -25,7 +25,7 @@ return {
       },
       mapping = cmp.mapping.preset.insert({
 		-- display completions and go next
-        ["<C-j>"] = cmp.mapping(function(fallback)
+        ["<C-'>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
           else
