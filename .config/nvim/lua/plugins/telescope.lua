@@ -15,9 +15,10 @@ return
 		{ "<leader>fd", function() vim.lsp.buf.definition() end, desc = "Go to definition" },
 		-- display information on hover
 		{ "<leader>fh", function() vim.lsp.buf.hover() end, desc = "Show variable definition" },
+		-- display references
+		{ "<leader>fr", function() vim.cmd("Telescope lsp_references") end, desc = "Find references" },
 		-- -- -- -- -- -- -- -- -- -- -- -- --
 		-- not used
-		{ "<leader>fr", function() vim.cmd("Telescope lsp_references") end, desc = "Find references" },
 		{ "<leader>fs", function() vim.cmd("Telescope lsp_document_symbols") end, desc = "Find document symbols" },
 		{ "<leader>fw", function() vim.cmd("Telescope lsp_workspace_symbols") end, desc = "Find workspace symbols" },
 		-- search nvim plugin

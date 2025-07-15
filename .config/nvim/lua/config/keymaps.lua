@@ -35,3 +35,8 @@ vim.keymap.set("n", "<leader>ru", function()
   vim.cmd("!rubocop -A %")
   vim.cmd("edit!")
 end, { desc = "Rubocop auto-correct current file" })
+
+-- Setting for git diff
+vim.keymap.set("n", "<leader>hd", ":DiffviewOpen<CR>", { desc = "Open Git diff" })
+vim.keymap.set("n", "<leader>hf", ":DiffviewFileHistory<CR>", { desc = "Open Git file history" })
+vim.keymap.set("n", "<leader>hc", ":DiffviewClose<CR>", { desc = "Close Diffview" })
