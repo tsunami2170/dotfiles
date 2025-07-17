@@ -3,8 +3,8 @@ vim.g.maplocalleader = " "
 
 require("config.options")
 require("config.keymaps")
-require("config.autocmds")
 require("config.lazy")
+require("config.autocmds")
 
 
 vim.api.nvim_set_hl(0, "RainbowDelimiterRed",    { fg = "#E06C75" }) -- 赤
