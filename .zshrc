@@ -17,7 +17,7 @@ alias open='xdg-open'
 
 # Alias for git
 alias gita='git add'
-alias gitc='git commit -m'
+alias gitc='git commit'
 alias gits='git status'
 alias gitl='git log --name-status'
 alias gitpush='git push'
