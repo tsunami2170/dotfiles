@@ -1,68 +1,3 @@
-# Settings for history of commands
-HISTSIZE=1000
-SAVEHIST=10000
-HISTFILE=~/.zsh_history
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-
-alias sudoup='sudo apt update && sudo apt upgrade -y'
-alias gccw='gcc -Wall -Wextra -Werror'
-alias ccw='cc -Wall -Wextra -Werror'
-alias ls='ls -F --color=auto'
-alias ll='ls -la'
-alias wlc='wl-copy < '
-alias nv='nvim'
-alias envlj='env LANG=ja_JP.UTF-8'
-alias open='xdg-open'
-
-# Alias for git
-alias gita='git add'
-alias gitc='git commit'
-alias gits='git status'
-alias gitl='git log --name-status'
-alias gitpush='git push'
-alias gitpull='git pull'
-alias gitstatus='git status'
-alias gitpushom='git push origin main'
-alias gitpullom='git pull origin main'
-alias gitnow='git add . && git commit -m now && git push origin main'
-alias obsidian="obsidian --force-device-scale-factor=1"
-
-# For 42Tokyo
-alias norminette='norminette -R CheckDefine'
-alias norm='norminette -R CheckDefine'
-
-export PATH="$PATH:/home/$USER/.local/bin"
-export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
-
-# For fcitx5
-export XMODIFIERS="@im=fcitx"
-export SDL_IM_MODULE=fcitx
-export GLFW_IM_MODULE=fcitx
-export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
-export MOZ_ENABLE_WAYLAND=1
-unset GTK_IM_MODULE
-
-# For complemention
-fpath=(~/.zsh/completions $fpath)
-autoload -Uz compinit
-compinit
-
-# For gopath
-export GOPATH=/home/$USER/Downloads/go
-
-# For history (use after install fzf)
-bindkey '^R' fzf-history-widget
-fzf-history-widget() {
-  local selected=$(fc -rl 1 | fzf +s --tac | sed 's/^[ 0-9]\+ *//')
-  if [[ -n $selected ]]; then
-    BUFFER=$selected
-    CURSOR=$#BUFFER
-    zle redisplay
-  fi
-}
-zle -N fzf-history-widget
-
 #**************************#
 #********* prompt *********#
 #**************************#
@@ -139,3 +74,87 @@ $(directory_segment)\
 $(git_branch_segment)\
 $(git_status_segment)"
 }
+
+#***********************************#
+#********* global settings *********#
+#***********************************#
+
+# Settings for history of commands
+HISTSIZE=1000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+
+alias ls='ls -F --color=auto'
+alias ll='ls -la'
+alias wlc='wl-copy < '
+alias nv='nvim'
+alias envlj='env LANG=ja_JP.UTF-8'
+
+# Alias for git
+alias gita='git add'
+alias gitc='git commit'
+alias gits='git status'
+alias gitl='git log --name-status'
+alias gitpush='git push'
+alias gitpull='git pull'
+alias gitstatus='git status'
+
+# For complemention
+fpath=(~/.zsh/completions $fpath)
+autoload -Uz compinit
+compinit
+
+# For history (use after install fzf)
+bindkey '^R' fzf-history-widget
+fzf-history-widget() {
+  local selected=$(fc -rl 1 | fzf +s --tac | sed 's/^[ 0-9]\+ *//')
+  if [[ -n $selected ]]; then
+    BUFFER=$selected
+    CURSOR=$#BUFFER
+    zle redisplay
+  fi
+}
+zle -N fzf-history-widget
+
+# For z
+eval "$(zoxide init zsh)"
+
+# For broot
+source $HOME/.config/broot/launcher/bash/br
+
+# For my commnnd
+export PATH="$HOME/.local/bin:$PATH"
+
+#**************************#
+#********* Mac OS *********#
+#**************************#
+
+export PATH="/opt/homebrew/bin:$PATH"
+
+#******************************#
+#********* arch linux *********#
+#******************************#
+
+# alias
+alias open='xdg-open'
+
+# For 42Tokyo
+alias norminette='norminette -R CheckDefine'
+alias norm='norminette -R CheckDefine'
+
+# For fcitx5
+export XMODIFIERS="@im=fcitx"
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=fcitx
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
+export MOZ_ENABLE_WAYLAND=1
+unset GTK_IM_MODULE
+
+
+# For gopath
+export GOPATH=$HOME/Downloads/go
+
+# For Ruby
+export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"

@@ -6,3 +6,5 @@ alias envlj='env LANG=ja_JP.UTF-8'
 
 # Created by `pipx` on 2025-01-09 05:49:59
 export PATH="$PATH:/home/tsunami/.local/bin"
+
+source /home/tsunami/.config/broot/launcher/bash/br
