@@ -44,7 +44,7 @@ function measure_time() {
 		min=$((i / 60))
 		sec=$((i % 60))
 		TIME=$(printf "%02d:%02d" "$min" "$sec")
-		output=$(figlet $FONT -w "$cols" "$2$3 $TIME     ")
+		output=$(figlet $FONT -w "$cols" "$2$3/$TIME     ")
 		render "$output"
 		sleep 1
 	done
