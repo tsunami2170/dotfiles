@@ -3,12 +3,21 @@
 ################
 
 # durations
-WORK_DURATION=$((60 * 25))
-REST_DURATION=$((60 * 5))
-SESSION_COUNT=$((8))
+if [ "$#" -eq 3 ]; then
+    WORK_MIN=$1
+    REST_MIN=$2
+    SESSION_COUNT=$3
+else
+    WORK_MIN=25
+    REST_MIN=5
+    SESSION_COUNT=8
+fi
+
+WORK_DURATION=$((WORK_MIN * 60))
+REST_DURATION=$((REST_MIN * 60))
 
 # refrence at
-SOUND="/System/Library/Sounds/Tink.aiff"
+SOUND="/usr/share/sounds/freedesktop/stereo/dialog-information.oga"
 FONT="-d $HOME/.figlet -f Georgia11"
 
 #################
@@ -17,7 +26,7 @@ FONT="-d $HOME/.figlet -f Georgia11"
 
 function render() {
 	cols=$(tput cols)
-	echo "\033[H"
+	printf "\033[H"
 	echo "$1"
 }
 
@@ -25,8 +34,8 @@ function notificate() {
 	clear
 	output=$(figlet $FONT -w "$cols" "*******")
 	render "$output"
-	terminal-notifier -title "健康通知" -message "$1"
-	afplay "$SOUND"
+    notify-send "健康通知" "$1"
+	paplay "$SOUND"
 }
 
 function measure_time() {
@@ -59,4 +68,4 @@ for ((count = 0; count < $SESSION_COUNT; count++)); do
 	notificate "休憩時間が終了しました" 
 done
 
-osascript -e "display dialog \"半日終了しました。休憩してください\" buttons {\"はい\"} with title \"健康通知\" "
+zenity --info --title="健康通知" --text="display dialog \"半日終了しました。休憩してください\"" --width=300

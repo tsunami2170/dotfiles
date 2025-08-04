@@ -1,0 +1,11 @@
+# 通知を画面の右上に表示
+anchor=top-right
+
+# 基本的なデザイン設定
+font=Monospace 10
+padding=10
+border-size=2
+border-radius=5
+background-color=#222222
+text-color=#dddddd
+border-color=#83F0FF

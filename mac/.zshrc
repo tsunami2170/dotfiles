@@ -131,7 +131,7 @@ export PATH="$HOME/.local/bin:$PATH"
 #********* Mac OS *********#
 #**************************#
 
-export PATH="/opt/homebrew/bin:$PATH"
+# export PATH="/opt/homebrew/bin:$PATH"
 
 #******************************#
 #********* arch linux *********#

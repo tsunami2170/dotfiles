@@ -1,0 +1,22 @@
+.gitconfig
+
+.config/Code - OSS/
+.config/Cursor/
+.config/dconf/
+.config/discord/
+.config/Electron/
+.config/fcitx/
+.config/fcitx5
+.config/gh/
+.config/github-copilot/
+.config/google-chrome/
+.config/gtk-3.0/
+.config/ibus/
+.config/mimeapps.list
+.config/mozc/
+.config/obsidian/
+.config/pulse/
+.config/yay/
+
+.config/user-dirs.dirs
+.config/user-dirs.locale 
