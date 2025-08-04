@@ -131,30 +131,4 @@ export PATH="$HOME/.local/bin:$PATH"
 #********* Mac OS *********#
 #**************************#
 
-# export PATH="/opt/homebrew/bin:$PATH"
-
-#******************************#
-#********* arch linux *********#
-#******************************#
-
-# alias
-alias open='xdg-open'
-
-# For 42Tokyo
-alias norminette='norminette -R CheckDefine'
-alias norm='norminette -R CheckDefine'
-
-# For fcitx5
-export XMODIFIERS="@im=fcitx"
-export SDL_IM_MODULE=fcitx
-export GLFW_IM_MODULE=fcitx
-export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
-export MOZ_ENABLE_WAYLAND=1
-unset GTK_IM_MODULE
-
-
-# For gopath
-export GOPATH=$HOME/Downloads/go
-
-# For Ruby
-export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
